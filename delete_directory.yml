@@ -1,0 +1,11 @@
+---
+- name: This playbook create a deletes
+  hosts: all
+  become: true
+
+  tasks: 
+  - name: deleting a directory
+    file:
+       path: /home/ansible/dir1
+       state: absent
+

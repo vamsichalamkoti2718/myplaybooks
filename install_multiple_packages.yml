@@ -1,0 +1,11 @@
+---
+- name: Installing packages
+  hosts: webservers
+  become: true
+
+  tasks: 
+  - name: Installing packages
+    yum: 
+      name: ['git','mysql','tree','which','wget']
+      state: installed
+
